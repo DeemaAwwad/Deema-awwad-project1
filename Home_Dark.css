@@ -3,13 +3,13 @@
 
 :root{
     --brand-primary: #0768AC;
---brand-secondary :#03C180;
---bg_default :#1A1A1A;
---bg_body :#282828;
---lines-color: #000000;
---body-text: #EDEDED;
---heart-color: #DC143C;
---body-dark-text:#333333;
+    --brand-secondary :#03C180;
+    --bg_default :#1A1A1A;
+    --bg_body :#282828;
+    --lines-color: #000000;
+    --body-text: #EDEDED;
+    --heart-color: #DC143C;
+    --body-dark-text:#333333;
 }
 *{
     margin:0;
@@ -24,7 +24,7 @@
 
 .nav {
     padding:20px 0;
-    background-color: var(--bg_default);
+    background-color:var(--bg_default);
 }
 .row{
     display: flex;
@@ -112,50 +112,50 @@ nav .row button a {
     flex-wrap: wrap;
     width: 100%;
     position: relative;
+    padding-top: 20px;
 }
 
 input{
     width:100%;
    border-radius:10px 0px 0px 10px;
-    padding:10px 0 11px 40px;
+    padding:13px 0 13px 40px;
    text-transform: capitalize;
    border: 1px solid var(--lines-color);
    background-color: var(--bg_default);
 
 }
+
+.courses{
+    background-color: var(--body-dark-text);
+    
+}
 .courses .search .input{
-    flex-grow:6;
-   
+  
+    width: 73%;
 }
 .courses .search svg {
     width:15px;
     position: absolute;
-    top:50%;
+    top:64%;
     transform: translateY(-50%);
     left:10px;
     color: var(--body-text);
 }
 
-.web p {
+.courses p {
     color: var(--body-text);
 }
 
-.web{
-    background-color: var(--bg_body);
-    padding:1em ;
-
-}
-
-
-
-.search .sort {
+.courses .option{
+    border: 1px solid var(--lines-color);
+    width:13.5%;
     background-color: var(--bg_default);
-    padding: 10px;
-    border:1px solid var(--lines-color);
     color: var(--body-text);
 }
-.search .filter{
-    border-radius: 0px 10px 10px 0;
+.courses .by-filter{
+    border-bottom-right-radius: 8px;
+    border-top-right-radius: 8px;
+
 }
 .search ion-icon {
     position: absolute;
@@ -172,6 +172,9 @@ input{
 .title{
     padding-top: 15px;
     padding-bottom: 18px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
     color: var(--body-text);
 }
 
@@ -181,36 +184,48 @@ input{
     gap: 20px;
 }
 .card{
-    background-color: var(--bg_default);
+    background-color: #fff;
     border-radius: 15px;
     display: flex;
     flex-direction: column;
     gap: 11px;
-    justify-content: space-evenly;
     width:calc( (100% - 80px ) / 5 );
+    background-color: var(--bg_default);
    
 }
+
+
 .card h3{
-    font-size: 14px;
+    font-size: 12px;
     font-weight: 600;
-    margin-top:30px;
+    margin-top:8px;
+ 
+  
 }
 .card .card-rating,.card-footer{
-    padding: 10px;
+    padding-left: 15px;
+
+}
+.card .card-header{
+    padding-bottom: 15px;
+    color: var(--body-text);
 }
 .card h4,h3{
-    padding-left: 10px;
+    padding-left: 15px;
+    white-space:nowrap;
+overflow:hidden;
+text-overflow:ellipsis;
+padding-right: 15px;
+    
 }
+
 
 .card img{
     width: 100%;
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
     height: 9rem;
-    background-color: #fff;
-}
-.card-header{
-   color: var(--body-text);
+    background-color: var(--body-text);
 }
 
 .card-rating{
@@ -218,55 +233,24 @@ input{
 
 }
  .card-rating svg {
-    width:20px;
-    height:20px;
+    width:15px;
+    height:15px;
     color:#DAA520;
 
 }
 .topics .card p{
     color: var(--lines-color);
 }
-
-.footer{
-   
-   position: fixed;
-   bottom: 0;
-    background-color: var(--bg_default);
-    padding-left: 15px;
-    padding-top: 15px;
-    width: 100%;
-    color: var(--body-text);
+.card-footer p{
+    color: var(--lines-color);
+    font-size: 13px;
+    color: #949393;
 }
-
-.boxes{
-  display: flex;
-  flex-wrap: wrap;
-  gap:20px;
-  width:22%;
-
-}
-.boxes .one{
-   
-    width:calc(( 100% - 20px )/2);
-    display: flex;
-    flex-direction: column;
-   
-}
-.one .one-card{
+.card-footer{
+    padding-bottom: 15px;
     
-    border: 1px solid var(--bg_body);
-    padding: 10px;
-    border-top: none;
-    margin-bottom: 12px;
-
 }
 
-.boxes img{
-    border-radius: 6px 6px 0 0;
-    aspect-ratio: 2/1;
-    border: 1px solid var(--bg_body);
-    border-bottom: none;
-}
 
 
 @media screen and (max-width:957px) {
@@ -277,6 +261,10 @@ input{
 
     .card{
         width:calc( (100% - 60px ) / 4 );
+        flex-shrink: 0;
+    }
+    .theme a{
+        display: none;
     }
 
 
@@ -287,6 +275,7 @@ input{
 @media screen and (max-width:490px){
     .container{
         width:calc(100% - 20px);
+        flex-shrink: 0;
     }
     nav .row button svg {
         width:10px;
@@ -303,6 +292,28 @@ input{
     .card{
         width:calc( (100% - 20px ) / 2 );
     }
+    .theme a{
+        display: none;
+    }
+    .header-content{
+        align-items: center;
+    }
+    .courses .search .input {
+        width: 100%;
+    }
+    .courses .option{
+        width: 50%;
+        padding: 10px;
+    }
+    .courses .search svg {
+        top: 40%;
+    }
+    .courses .by-filter{
+        border-top-right-radius: 0px;
+    }
+    .header-content p:last-of-type{
+    font-size: 14px;
+    }
 }
 
 @media screen and (max-width:330px){
@@ -318,6 +329,29 @@ input{
 
     .card{
         width:100%;
+        flex-grow: 0;
+    }
+    .theme a{
+        display: none;
+    }
+    .header-content .welcome:first-of-type {
+        font-size: 21px;
+    }
+    .header-content p:last-of-type{
+        font-size: 8px;
+    }
+    .courses .search .input {
+        width: 100%;
+    }
+    .courses .option{
+        width: 50%;
+        padding: 10px;
+    }
+    .courses .search svg {
+        top: 40%;
+    }
+    .courses .by-filter{
+        border-top-right-radius: 0px;
     }
 }
 

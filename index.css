@@ -109,46 +109,46 @@ nav .row button a {
     flex-wrap: wrap;
     width: 100%;
     position: relative;
+    padding-top: 20px;
 }
 
 input{
     width:100%;
    border-radius:10px 0px 0px 10px;
-    padding:10px 0 11px 40px;
+    padding:13px 0 13px 40px;
    text-transform: capitalize;
    border: 1px solid var(--lines-color);
 
 }
+
+.courses{
+    background-color: var(--bg_body);
+    
+}
 .courses .search .input{
-    flex-grow:6;
+  
+    width: 73%;
 }
 .courses .search svg {
     width:15px;
     position: absolute;
-    top:50%;
+    top:64%;
     transform: translateY(-50%);
     left:10px;
 }
 
-.web p {
+.courses p {
     color: var(--body-text);
 }
 
-.web{
-    background-color: var(--bg_body);
-    padding:1em ;
-
+.courses .option{
+    border: 1px solid var(--lines-color);
+    width:13.5%;
 }
+.courses .by-filter{
+    border-bottom-right-radius: 8px;
+    border-top-right-radius: 8px;
 
-
-
-.search .sort {
-    background-color: var(--bg_default);
-    padding: 10px;
-    border:1px solid var(--lines-color)
-}
-.search .filter{
-    border-radius: 0px 10px 10px 0;
 }
 .search ion-icon {
     position: absolute;
@@ -165,6 +165,9 @@ input{
 .title{
     padding-top: 15px;
     padding-bottom: 18px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .box {
@@ -178,21 +181,32 @@ input{
     display: flex;
     flex-direction: column;
     gap: 11px;
-    justify-content: space-evenly;
     width:calc( (100% - 80px ) / 5 );
    
 }
 .card h3{
-    font-size: 14px;
+    font-size: 12px;
     font-weight: 600;
-    margin-top:30px;
+    margin-top:8px;
+ 
+  
 }
 .card .card-rating,.card-footer{
-    padding: 10px;
+    padding-left: 15px;
+
+}
+.card .card-header{
+    padding-bottom: 15px;
 }
 .card h4,h3{
-    padding-left: 10px;
+    padding-left: 15px;
+    white-space:nowrap;
+overflow:hidden;
+text-overflow:ellipsis;
+padding-right: 15px;
+    
 }
+
 
 .card img{
     width: 100%;
@@ -206,13 +220,20 @@ input{
 
 }
  .card-rating svg {
-    width:20px;
-    height:20px;
+    width:15px;
+    height:15px;
     color:#DAA520;
 
 }
 .topics .card p{
     color: var(--lines-color);
+}
+.card-footer p{
+    color: var(--lines-color);
+    font-size: 13px;
+}
+.card-footer{
+    padding-bottom: 15px;
 }
 
 
@@ -225,6 +246,10 @@ input{
 
     .card{
         width:calc( (100% - 60px ) / 4 );
+        flex-shrink: 0;
+    }
+    .theme a{
+        display: none;
     }
 
 
@@ -235,6 +260,7 @@ input{
 @media screen and (max-width:490px){
     .container{
         width:calc(100% - 20px);
+        flex-shrink: 0;
     }
     nav .row button svg {
         width:10px;
@@ -251,6 +277,28 @@ input{
     .card{
         width:calc( (100% - 20px ) / 2 );
     }
+    .theme a{
+        display: none;
+    }
+    .header-content{
+        align-items: center;
+    }
+    .courses .search .input {
+        width: 100%;
+    }
+    .courses .option{
+        width: 50%;
+        padding: 10px;
+    }
+    .courses .search svg {
+        top: 40%;
+    }
+    .courses .by-filter{
+        border-top-right-radius: 0px;
+    }
+    .header-content p:last-of-type{
+    font-size: 14px;
+    }
 }
 
 @media screen and (max-width:330px){
@@ -266,6 +314,29 @@ input{
 
     .card{
         width:100%;
+        flex-grow: 0;
+    }
+    .theme a{
+        display: none;
+    }
+    .header-content .welcome:first-of-type {
+        font-size: 21px;
+    }
+    .header-content p:last-of-type{
+        font-size: 8px;
+    }
+    .courses .search .input {
+        width: 100%;
+    }
+    .courses .option{
+        width: 50%;
+        padding: 10px;
+    }
+    .courses .search svg {
+        top: 40%;
+    }
+    .courses .by-filter{
+        border-top-right-radius: 0px;
     }
 }
 

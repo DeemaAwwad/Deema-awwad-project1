@@ -124,7 +124,7 @@ nav .row button a {
 .html-page{
     
     color: #fff;
-    width: 36%;
+    width: 38%;
     margin-right: 22rem;
     padding: 34px;
 }
@@ -153,7 +153,7 @@ nav .row button a {
 }
 
 .sub-topics{
-    width: 36%;
+    width: 38%;
     margin-right: 22rem;
     margin-top: 35px;
 }
@@ -166,6 +166,9 @@ li{
     padding: 15px;
     background-color:var(--bg_default);
     display:flex;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
 }
 
 ul li ion-icon{
@@ -173,12 +176,13 @@ ul li ion-icon{
     width: 23px;
     height: 23px;
     padding-right: 10px;
+    flex-shrink: 0;
 }
 .card{
     width:22%;
     position: absolute;
     top: 36px;
-    left: 55rem;
+    left: 60rem;
     background-color: #fff;
     padding-bottom: 10px;
     border: 1px solid var(--bg_default);
@@ -197,7 +201,7 @@ ul li ion-icon{
     background-color: var(--brand-secondary);
     color: var(--bg_body);
     padding: 14px 29px;
-    font-size: 23px;
+    font-size: 22px;
     border: none;
     display: flex;
     margin-top: 9px;
@@ -245,6 +249,10 @@ ul li ion-icon{
     height: 27px;
 }
 
+.credit{
+    color: #949393;
+}
+
 
 
 @media screen and (max-width:768px){
@@ -273,16 +281,101 @@ ul li ion-icon{
     }
   
 }
-@media (min-width:769px) and (max-width:957px){
+@media (min-width:769px) and (max-width:869px){
 
     .triangle1,.triangle2 {
         height:40px;
     }
 
     .card{
-        width:calc( (100% - 60px ) / 4 );
-        left: 39rem;
+        left: 28rem;
+        width: 35%;
+        margin-top: 4rem;
+    }
+    .intrested button{
+        padding: 0px 5px;
+        font-size: 14px;
+    }
+    .card .credits{
+        font-size: 14px;
+    }
+    .card img{
+        height: 10rem;
+    }
+    .intrested{
+        font-size: 10px;
+    }
+    .html-page, .sub-topics{
+        width: 42%;
     }
     
 }
+@media (min-width:870px) and (max-width:1105px){
+    .card{
+        left: 37rem;
+    width: 32%;
+    margin-top: 3rem;
+    }
+}
+@media (min-width:1106px) and (max-width:1198px){
+    .card{
+        left: 45rem;
+        width: 27%;
+        margin-top: 4rem;
+    }
+}
 
+
+@media screen and (max-width:490px){
+    .container{
+        width:calc(100% - 20px);
+        flex-shrink: 0;
+    }
+    nav .row button svg {
+        width:10px;
+        height:10px;
+    }
+
+    nav .row button {
+        padding:5px 10px;
+    }
+    .nav button a {
+        font-size: 13px;
+    }
+
+  
+    .theme a{
+        display: none;
+    }
+    .header-content{
+        align-items: center;
+    }
+   
+    .header-content p:last-of-type{
+    font-size: 13px;
+    }
+}
+
+@media screen and (max-width:330px){
+    .container{
+        width:calc(100% - 5px);
+    }
+    nav .row button {
+        padding:5px 5px;
+    }
+    .nav button a {
+        font-size: 13px;
+    }
+    .theme a{
+        display: none;
+    }
+
+  
+    .header-content .welcome:first-of-type {
+        font-size: 21px;
+    }
+    .header-content p:last-of-type{
+        font-size: 8px;
+    }
+    
+}
